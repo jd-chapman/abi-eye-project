@@ -73,13 +73,13 @@ class MotorController:
         # move motors
         self._doMove(motorXPwmPercentage, motorYPwmPercentage)
 
-    def getXY(self) -> tuple(float, float):
+    def getXY(self) -> tuple[float, float]:
         xVal = (((self.motorXPosition - self.PWM_LOWER_LIMIT) / self.PWM_RANGE) * self.AXES_RANGE) + self.AXES_LOWER_LIMIT
         yVal = (((self.motorYPosition - self.PWM_LOWER_LIMIT) / self.PWM_RANGE) * self.AXES_RANGE) + self.AXES_LOWER_LIMIT
 
         return (xVal, yVal)
 
-    def getAngles(self) -> tuple(float, float):
+    def getAngles(self) -> tuple[float, float]:
         xVal = (((self.motorXPosition - self.PWM_LOWER_LIMIT) / self.PWM_RANGE) * self.ANGLE_RANGE) + self.ANGLE_LOWER_LIMIT
         yVal = (((self.motorYPosition - self.PWM_LOWER_LIMIT) / self.PWM_RANGE) * self.ANGLE_RANGE) + self.ANGLE_LOWER_LIMIT
 
