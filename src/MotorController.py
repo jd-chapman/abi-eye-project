@@ -4,8 +4,8 @@ from time import sleep
 class MotorController:
     def __init__(self):
         # constants setup
-        self.MOTOR_X_PIN = 1
-        self.MOTOR_Y_PIN = 1
+        self.MOTOR_X_PIN = 12
+        self.MOTOR_Y_PIN = 13
         self.PWM_FREQUENCY_HZ = 50
         self.AXES_LOWER_LIMIT = 0
         self.AXES_UPPER_LIMIT = 100
