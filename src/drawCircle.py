@@ -1,6 +1,5 @@
 from MotorController import MotorController
 from threading import Thread
-from time import sleep
 from math import sin, radians
 
 def backgroundLoop():
