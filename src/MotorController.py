@@ -82,3 +82,11 @@ class MotorController:
 
         # wait for move to complete
         sleep(self.PWM_MOVE_SLEEP_TIME_S)
+
+# test script
+if __name__ == "__main__":
+    controller = MotorController()
+
+    for i in range(0, 101):
+        controller.moveXY(i, i)
+        sleep(1)
