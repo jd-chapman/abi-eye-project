@@ -85,8 +85,10 @@ class MotorController:
 
 # test script
 if __name__ == "__main__":
+    # create an instance of the MotorController class
     controller = MotorController()
 
+    # move the motors from one end of their range to the other
     for i in range(0, 101):
         controller.moveXY(i, i)
         sleep(1)
