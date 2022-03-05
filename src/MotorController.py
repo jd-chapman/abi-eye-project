@@ -24,6 +24,9 @@ class MotorController:
         self.motorXPosition = None
         self.motorYPosition = None
 
+        # disable GPIO warnings
+        GPIO.setwarnings(False)
+
         # PWM setup
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.MOTOR_X_PIN, GPIO.OUT)
