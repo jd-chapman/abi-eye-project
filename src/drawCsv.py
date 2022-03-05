@@ -28,7 +28,7 @@ def backgroundLoop():
 
     while True:
         for i in range(0, len(coordinates)):
-            controller.moveXY(coordinates[0], coordinates[1])
+            controller.moveXY(coordinates[i][0], coordinates[i][1])
 
 if __name__ == "__main__":
     # get name / path of data file
