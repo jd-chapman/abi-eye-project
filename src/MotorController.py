@@ -23,7 +23,7 @@ class MotorController:
         self.motorYPosition = None
 
         # PWM setup
-        GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.MOTOR_X_PIN, GPIO.OUT)
         GPIO.setup(self.MOTOR_Y_PIN, GPIO.OUT)
         self.motorXPwm = GPIO.PWM(self.MOTOR_X_PIN, self.PWM_FREQUENCY_HZ)
