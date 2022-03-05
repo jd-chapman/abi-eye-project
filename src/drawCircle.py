@@ -8,7 +8,7 @@ def backgroundLoop():
     controller = MotorController()
 
     while True:
-        for i in range(0, 360):
+        for i in range(0, 360, 2):
             xVal = (sin(radians(i)) + 1) * 50
             yVal = (sin(radians(i + 90)) + 1) * 50
             controller.moveXY(xVal, yVal)
