@@ -15,16 +15,16 @@ def backgroundLoop():
         for i in range(0, len(line)):
             if "," == line[i]:
                 delimiterPositions.append(i)
-        assert(2 == len(delimiterPositions))
 
-        # extract x and y values
-        xVal = float(line[0:delimiterPositions[0]])
-        yVal = float(line[(delimiterPositions[0] + 1):delimiterPositions[1]])
+        if 2 == len(delimiterPositions):
+            # extract x and y values
+            xVal = float(line[0:delimiterPositions[0]])
+            yVal = float(line[(delimiterPositions[0] + 1):delimiterPositions[1]])
 
-        # append x and y values to coordinates array
-        xyPair.append(xVal)
-        xyPair.append(yVal)
-        coordinates.append(xyPair)
+            # append x and y values to coordinates array
+            xyPair.append(xVal)
+            xyPair.append(yVal)
+            coordinates.append(xyPair)
 
     while True:
         for i in range(0, len(coordinates)):
