@@ -63,13 +63,13 @@ class MotorController:
         # move motors
         self._doMove(motorXPwmPercentage, motorYPwmPercentage)
 
-    def getXY(self) -> tuple(float, float):
-        # *****
-        pass
+    #def getXY(self) -> tuple(float, float):
+    #    # *****
+    #    pass
 
-    def getAngles(self) -> tuple(float, float):
-        # *****
-        pass
+    #def getAngles(self) -> tuple(float, float):
+    #    # *****
+    #    pass
 
     def _doMove(self, xDutyCycle: float, yDutyCycle: float):
         # record motor positions
