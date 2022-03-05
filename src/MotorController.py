@@ -6,7 +6,7 @@ class MotorController:
         # constants setup
         self.MOTOR_X_PIN = 12
         self.MOTOR_Y_PIN = 13
-        self.PWM_FREQUENCY_HZ = 50
+        self.PWM_FREQUENCY_HZ = 200
         self.AXES_LOWER_LIMIT = 0
         self.AXES_UPPER_LIMIT = 100
         self.AXES_RANGE = self.AXES_UPPER_LIMIT - self.AXES_LOWER_LIMIT
@@ -18,7 +18,7 @@ class MotorController:
         self.PWM_LOWER_LIMIT = (self.MOTOR_MINIMUM_PULSE_S / (1 / self.PWM_FREQUENCY_HZ)) * 100
         self.PWM_UPPER_LIMIT = (self.MOTOR_MAXIMUM_PULSE_S / (1 / self.PWM_FREQUENCY_HZ)) * 100
         self.PWM_RANGE = self.PWM_UPPER_LIMIT - self.PWM_LOWER_LIMIT
-        self.PWM_MOVE_SLEEP_TIME_S = (1 / self.PWM_FREQUENCY_HZ) * 2
+        self.PWM_MOVE_SLEEP_TIME_S = (1 / self.PWM_FREQUENCY_HZ)
 
         # variable setup
         self.motorXPosition = None
