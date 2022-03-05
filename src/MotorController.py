@@ -39,8 +39,8 @@ class MotorController:
         # check x and y values are in range
         assert(x > self.AXES_LOWER_LIMIT)
         assert(y > self.AXES_LOWER_LIMIT)
-        assert(x > self.AXES_UPPER_LIMIT)
-        assert(y > self.AXES_UPPER_LIMIT)
+        assert(x < self.AXES_UPPER_LIMIT)
+        assert(y < self.AXES_UPPER_LIMIT)
 
         # translate x and y to duty cycle values
         motorXPwmPercentage = (((x - self.AXES_LOWER_LIMIT) / self.AXES_RANGE) * self.PWM_RANGE) + self.PWM_LOWER_LIMIT
@@ -53,8 +53,8 @@ class MotorController:
         # check angle values are in range
         assert(xAngle > self.ANGLE_LOWER_LIMIT)
         assert(yAngle > self.ANGLE_LOWER_LIMIT)
-        assert(xAngle > self.ANGLE_UPPER_LIMIT)
-        assert(yAngle > self.ANGLE_UPPER_LIMIT)
+        assert(xAngle < self.ANGLE_UPPER_LIMIT)
+        assert(yAngle < self.ANGLE_UPPER_LIMIT)
 
         # translate angles to duty cycle values
         motorXPwmPercentage = (((xAngle - self.ANGLE_LOWER_LIMIT) / self.ANGLE_RANGE) * self.PWM_RANGE) + self.PWM_LOWER_LIMIT
