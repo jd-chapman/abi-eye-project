@@ -35,6 +35,11 @@ class MotorController:
         centre = (self.AXES_RANGE / 2) + self.AXES_LOWER_LIMIT
         self.moveXY(centre, centre)
 
+    def __del__(self):
+        self.motorXPwm.stop()
+        self.motorYPwm.stop()
+        GPIO.cleanup()
+
     def moveXY(self, x: float, y: float):
         # check x and y values are in range
         assert(x >= self.AXES_LOWER_LIMIT)
