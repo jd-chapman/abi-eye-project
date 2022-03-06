@@ -10,11 +10,11 @@ class MotorController:
         self.AXES_LOWER_LIMIT = 0
         self.AXES_UPPER_LIMIT = 100
         self.AXES_RANGE = self.AXES_UPPER_LIMIT - self.AXES_LOWER_LIMIT
-        self.ANGLE_LOWER_LIMIT = 0
-        self.ANGLE_UPPER_LIMIT = 180
+        self.ANGLE_LOWER_LIMIT = -30
+        self.ANGLE_UPPER_LIMIT = 30
         self.ANGLE_RANGE = self.ANGLE_UPPER_LIMIT - self.ANGLE_LOWER_LIMIT
-        self.MOTOR_MINIMUM_PULSE_S = 0.0004
-        self.MOTOR_MAXIMUM_PULSE_S = 0.0020
+        self.MOTOR_MINIMUM_PULSE_S = 0.00095
+        self.MOTOR_MAXIMUM_PULSE_S = 0.00145
         self.PWM_LOWER_LIMIT = (self.MOTOR_MINIMUM_PULSE_S / (1 / self.PWM_FREQUENCY_HZ)) * 100
         self.PWM_UPPER_LIMIT = (self.MOTOR_MAXIMUM_PULSE_S / (1 / self.PWM_FREQUENCY_HZ)) * 100
         self.PWM_RANGE = self.PWM_UPPER_LIMIT - self.PWM_LOWER_LIMIT
