@@ -68,7 +68,7 @@ class MotorController:
 
         # translate angles to duty cycle values
         motorXPwmPercentage = (((xAngle - self.ANGLE_LOWER_LIMIT) / self.ANGLE_RANGE) * self.PWM_RANGE) + self.PWM_LOWER_LIMIT
-        motorYPwmPercentage = 0
+        motorYPwmPercentage = (((yAngle - self.ANGLE_LOWER_LIMIT) / self.ANGLE_RANGE) * self.PWM_RANGE) + self.PWM_LOWER_LIMIT
 
         # move motors
         self._doMove(motorXPwmPercentage, motorYPwmPercentage)
